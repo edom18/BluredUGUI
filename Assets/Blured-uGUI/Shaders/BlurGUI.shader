@@ -100,10 +100,10 @@
 
             fixed4 frag(v2f IN) : SV_Target
             {
-                float4 uv = (IN.pos / IN.pos.w);
+                float2 uv = IN.pos.xy;
                 uv.y = 1.0 - uv.y;
+
                 half4 color = (tex2D(_GrabBlurTexture, uv) + _TextureSampleAdd) * IN.color;
-                // half4 color = tex2D(_GrabBlurTexture, uv) * IN.color;
 
                 #ifdef UNITY_UI_CLIP_RECT
                 color.a *= UnityGet2DClipping(IN.worldPosition.xy, _ClipRect);
