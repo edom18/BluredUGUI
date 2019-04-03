@@ -100,7 +100,7 @@
 
             fixed4 frag(v2f IN) : SV_Target
             {
-                float2 uv = IN.pos.xy;
+                float2 uv = IN.pos.xy / IN.pos.w;
                 uv.y = 1.0 - uv.y;
 
                 half4 color = (tex2D(_GrabBlurTexture, uv) + _TextureSampleAdd) * IN.color;
