@@ -1,6 +1,6 @@
 # Blured uGUI
 
-This project is Blured uGUI background sample.
+This project is Blured uGUI background sample.  
 Run this project shows below.
 
-![]()
+![](./demo.gif)
